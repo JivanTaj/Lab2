@@ -46,3 +46,43 @@ table.AddRow($"decimal", $"16", $"{decimal.MinValue}", $"{decimal.MaxValue}");
 //displaying the table 
 Console.WriteLine(table);
 
+//q4
+//create the calculator 
+Boolean cont = true; 
+while(cont == true)
+{
+    //press esc
+    Console.WriteLine("press esc to quit");
+    //get numbers 
+    Console.WriteLine("First number: "); 
+    double numA = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine("second number: ");
+    double numB = Convert.ToDouble(Console.ReadLine());
+    //get operation 
+    Console.WriteLine($"1.Addition  2.Subtraction   3.Multiply  4.Divide    5.Mod");
+    Console.WriteLine("Press a number to select the operation");
+    double selection = Convert.ToDouble(Console.ReadLine());
+    switch (selection)
+    {
+        case 1: Console.WriteLine($"{numA} + {numB} = {numA + numB}");
+            break;
+       case 2: Console.WriteLine($"{numA} - {numB} = {numA - numB}");
+            break;
+       case 3: Console.WriteLine($"{numA} x {numB} = {numA * numB}");
+            break;
+       case 4: Console.WriteLine($"{numA} / {numB} = {numA / numB}");
+            break;
+       case 5: Console.WriteLine($"{numA} % {numB} = {numA % numB}");
+            break;
+
+    }
+    //giving an out 
+    Console.WriteLine($"hit esc to continue, any other key to continue");
+    if(Console.ReadKey().Key == ConsoleKey.Escape)
+    {
+        cont = false;
+    }
+
+
+}
+
